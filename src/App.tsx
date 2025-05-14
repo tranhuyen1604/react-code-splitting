@@ -7,7 +7,9 @@ const Home = lazy(() =>
   import("./components/Home").then((module) => ({ default: module.Home }))
 );
 const About = lazy(() => import("./components/About"));
-const Nav = lazy(() => import("./components/About"));
+const Nav = lazy(() =>
+  import("./components/Nav").then((module) => ({ default: module.Nav }))
+);
 
 export default function App() {
   const [tab, setTab] = useState<"home" | "about" | "nav">("home");
